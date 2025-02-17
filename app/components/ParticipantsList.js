@@ -39,7 +39,7 @@ const ParticipantList = () => {
       try {
         setLoading(true);
         const { data } = await axios.get(
-          "https://sxv-backend.onrender.com/api/events/getEvents"
+          "https://sxv-backend.vercel.app/api/events/getEvents"
         );
         setEventOptions(data.events);
       } catch (err) {
@@ -61,7 +61,7 @@ const ParticipantList = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://sxv-backend.onrender.com/api/events/getEv",
+        "https://sxv-backend.vercel.app/api/events/getEv",
         {
           eventId: eventName,
         }
